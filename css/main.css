@@ -1,0 +1,334 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.primary-heading {
+  font-size: 2rem;
+  color: #48556a;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .primary-heading {
+    font-size: 1.6rem;
+  }
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  background-color: #ecf2f8;
+  letter-spacing: 0.1rem;
+}
+
+.container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.container .attribution {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.container .attribution__link {
+  text-decoration: none;
+}
+
+.container .attribution__link:link, .container .attribution__link:visited {
+  color: #3e52a3;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.container .attribution__link:hover, .container .attribution__link:active {
+  font-weight: 700;
+}
+
+.main {
+  min-height: calc(100vh - 25px);
+}
+
+@media only screen and (max-width: 43.75em) {
+  .main {
+    padding: 2rem;
+  }
+}
+
+.main .article {
+  max-width: 1200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35% 1fr;
+      grid-template-columns: 35% 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .main .article {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 40vh 40vh 20px;
+        grid-template-rows: 40vh 40vh 20px;
+    top: 45%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -45%);
+            transform: translate(-50%, -45%);
+    min-width: 300px;
+    max-width: 400px;
+  }
+}
+
+.main .article__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: .8rem;
+  border-bottom-left-radius: .8rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .main .article__img {
+    border-top-left-radius: .8rem;
+    border-top-right-radius: .8rem;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.main .article__content {
+  padding: 2.5rem;
+  background-color: white;
+  border-radius: .8rem;
+}
+
+.main .article__heading {
+  margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .main .article__heading {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .main .article__heading {
+    margin-bottom: 1rem;
+  }
+}
+
+.main .article__paragraph {
+  color: #6d7f97;
+}
+
+.main .article__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .main .article__details {
+    margin-top: 2.2rem;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  .main .article__details {
+    margin-top: 1.5rem;
+  }
+}
+
+.main .article__details .author-avatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  margin-right: 2.5rem;
+}
+
+.main .article__details .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: auto;
+}
+
+.main .article__details .author-name {
+  color: #48556a;
+}
+
+.main .article__details .post-date {
+  font-size: 1rem;
+  color: #6d7f97;
+}
+
+.main .share {
+  position: relative;
+  margin: 2rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .main .share {
+    position: unset;
+  }
+}
+
+.main .share__checkbox {
+  display: none;
+}
+
+.main .share .share__checkbox:checked + .share__btn {
+  background-color: #6d7f97;
+}
+
+.main .share .share__checkbox:checked + .share__btn .share__icon {
+  background-color: #fff;
+}
+
+.main .share__icon {
+  display: inline-block;
+  background-color: #6d7f97;
+  -webkit-mask-image: url("../images/icon-share.svg");
+          mask-image: url("../images/icon-share.svg");
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  width: 2rem;
+  height: 1.5rem;
+}
+
+.main .share__btn {
+  cursor: pointer;
+  background-color: #ecf2f8;
+  padding: 1rem 1.1rem;
+  border-radius: 50%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .main .share__btn {
+    position: absolute;
+    top: 85.7%;
+    right: 5rem;
+    z-index: 10;
+    padding: 1.3rem 1.4rem;
+  }
+}
+
+.main .share .share__checkbox:checked ~ .share__bg {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+.main .share__bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  top: -7rem;
+  left: -7.5rem;
+  background-color: #48556a;
+  padding: .8rem 2.5rem;
+  border-radius: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.main .share__bg::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #48556a;
+  top: 4rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .main .share__bg::after {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .main .share__bg::after {
+    left: 47%;
+  }
+}
+
+.main .share__bg > *:not(:last-child) {
+  margin-right: 1.2rem;
+}
+
+.main .share__bg .text {
+  font-size: 1.2rem;
+  color: #9eafc2;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .main .share__bg {
+    left: 0;
+    top: 84.8%;
+    width: 100%;
+    border-radius: 1rem;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    padding: 2.5rem 0;
+    padding-left: 2.5rem;
+  }
+  .main .share__bg > *:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
